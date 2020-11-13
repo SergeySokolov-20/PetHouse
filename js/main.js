@@ -13,42 +13,41 @@ document.querySelector('.header__list').onclick = function () {
 
 
 $(document).ready(function () {
-   $('.slider-container').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+   $(".owl-carousel").owlCarousel({
+      loop: true,
+      nav: true,
       autoplay: true,
-      autoplaySpeed: 2000,
-      prevArrow: '<img src="img/left1.png" class="slick-prev" alt="prev">',
-      nextArrow: '<img src="img/right1.png" class"slick-next" alt="next">',
-      responsive: [
-         {
-            breakpoint: 1024,
-            settings: {
-               slidesToShow: 2,
-               slidesToScroll: 2,
-               infinite: true,
-            }
-         },
-         {
-            breakpoint: 768,
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1
-            }
-         },
-         {
-            breakpoint: 480,
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1,
-               arrows: false,
-            }
-         },
-      ]
-  });
-});
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+         // breakpoint from 0 up
+         0: {
+            items: 1,
+            nav: false,
+            margin: 0,
+            stagePadding: 0,
 
+         },
+         // breakpoint from 480 up
+         550: {
+            margin: 20,
+            items: 2,
+            nav: false
+         },
+         // breakpoint from 768 up
+         780: {
+            margin: 50,
+            items: 3,
+            nav: false
+         },
+         852: {
+            margin: 50,
+            items: 3,
+            stagePadding: 40,
+         },
+      }
+   });
+});
 
 
 let animItems = document.querySelectorAll('._anim-items');
