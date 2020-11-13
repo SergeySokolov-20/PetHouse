@@ -23,28 +23,30 @@ $(document).ready(function () {
       nextArrow: '<img src="img/right1.png" class"slick-next" alt="next">',
       responsive: [
          {
-            breakpoint: 1024,
+            breakpoint: 1100,
             settings: {
                slidesToShow: 2,
-               slidesToScroll: 2,
-               infinite: true,
+               slidesToScroll: 1,
+               infinite: true
+
             }
          },
          {
-            breakpoint: 768,
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1
-            }
-         },
-         {
-            breakpoint: 480,
+            breakpoint: 700,
             settings: {
                slidesToShow: 1,
                slidesToScroll: 1,
-               arrows: false,
             }
          },
+         {
+            breakpoint: 400,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               arrows: false
+            }
+         }
+
       ]
   });
 });
